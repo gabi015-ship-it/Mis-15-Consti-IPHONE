@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Mis 15 Años</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="contenedor-principal">
+    <!-- PANTALLA 1: INTRO VIDEO -->
+    <div id="inicio" class="pantalla activa">
+      <video id="videoIntro" class="video-fondo" playsinline webkit-playsinline preload="auto">
+        <source src="video/intro.mp4" type="video/mp4">
+      </video>
+      <div id="mensaje">Toca el centro para comenzar</div>
+    </div>
+
+    <!-- PANTALLA 2: INVITACIÓN PRINCIPAL -->
+    <div id="elegante" class="pantalla">
+      <video id="videoFondoInvitacion" class="video-fondo-loop" muted loop playsinline webkit-playsinline preload="auto">
+        <source src="video/fondo-invitacion.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-overlay"></div>
+
+      <!-- REPRODUCTOR DE MÚSICA SUPERIOR (ESPECIAL PARA IPHONE / MÓVILES) -->
+      <div class="reproductor-superior" id="reproductorMusica" role="region" aria-label="Reproductor de música">
+        <button id="btnPlayPause" class="reproductor-btn-play" aria-label="Reproducir o pausar música" type="button">
+          <!-- Icono Play -->
+          <svg id="iconoPlay" class="icono-reproductor" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5.14v14l11-7-11-7z"/>
+          </svg>
+          <!-- Icono Pause -->
+          <svg id="iconoPause" class="icono-reproductor oculto" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+
+        <div class="reproductor-cuerpo">
+          <div class="reproductor-encabezado">
+            <span class="reproductor-titulo">
+              <span class="estrella-mini">✧</span> Nuestra Canción <span class="estrella-mini">✧</span>
+            </span>
+            <div class="ecualizador-magico" id="ecualizadorMagico" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="reproductor-controles-tiempo">
+            <span id="tiempoActual" class="tiempo-audio">0:00</span>
+            <input type="range" id="barraProgreso" class="barra-progreso-audio" value="0" min="0" max="100" step="0.1" aria-label="Progreso de la canción">
+            <span id="tiempoTotal" class="tiempo-audio">0:00</span>
+          </div>
+        </div>
+
+        <button id="btnMute" class="reproductor-btn-mute" aria-label="Silenciar o activar sonido" type="button">
+          <!-- Icono Volumen Activo -->
+          <svg id="iconoVolumen" class="icono-reproductor-sm" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+          </svg>
+          <!-- Icono Silenciado -->
+          <svg id="iconoMute" class="icono-reproductor-sm oculto" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="scroll-container">
+        
+        <section class="seccion-info">
+          <h1 class="dato-secundario">Hay sueños que se tejen con hilos de ilusión y momentos que se graban en el alma para siempre. </h1>
+          <p class="titulo-grande">Mis 15 Años</p>
+          <p class="dato-secundario">"Hoy abro la puerta al capítulo más hermoso de mi vida, y me llena de felicidad que formes parte de él."</p>
+          <div class="scroll-indicador">↓ Desliza para descubrir más ↓</div>
+        </section>
+
+        
+        <!-- SECCIÓN DE LA FIESTA -->
+        <section class="seccion-info seccion-fiesta">
+          <p class="dato-secundario">: "Una noche única merece ser vivida con las personas que más quiero. Prepara tu mejor sonrisa porque nos espera una gran celebración."</p>
+          <h2 class="dato-resaltante">Sábado 28 de Noviembre</h2>
+          <p class="dato-resaltante">22:00hs</p>
+          <p class="titulo-lugares">Salon de Fiestas "Lemf"</p>
+          <a href="https://maps.app.goo.gl/d6F7x9GoJKANiBKR7" target="_blank">
+            <img src="img/ubi2.gif" class="gif-mapa" alt="Ver ubicación">
+          </a>
+        </section>
+
+
+        <!-- SECCIÓN DE CUENTA REGRESIVA -->
+        <section class="seccion-info seccion-contador-elegante">
+          <div class="contador-elegante-card" aria-label="Cuenta regresiva para la fiesta de quince años">
+            <p class="contador-elegante-eyebrow">Una noche para recordar</p>
+            <h2 class="contador-elegante-script-title">Mis 15 años</h2>
+            <p class="contador-elegante-date-line">28 · NOVIEMBRE · 2026 &nbsp;|&nbsp; 22:00 HS</p>
+            <div class="contador-elegante-ornament" aria-hidden="true">✧ ♡ ✧</div>
+            <div class="contador-elegante-units" id="countdownElegante" role="timer" aria-live="off">
+              <div class="contador-elegante-unit"><span class="contador-elegante-number" id="diasCuenta">00</span><span class="contador-elegante-label">Días</span></div>
+              <div class="contador-elegante-unit"><span class="contador-elegante-number" id="horasCuenta">00</span><span class="contador-elegante-label">Horas</span></div>
+              <div class="contador-elegante-unit"><span class="contador-elegante-number" id="minutosCuenta">00</span><span class="contador-elegante-label">Minutos</span></div>
+              <div class="contador-elegante-unit"><span class="contador-elegante-number" id="segundosCuenta">00</span><span class="contador-elegante-label">Segundos</span></div>
+            </div>
+            <p class="contador-elegante-footer" id="mensajeCuenta">La magia está por comenzar…</p>
+          </div>
+          <div class="contador-elegante-indicador">↓ Desliza para descubrir más ↓</div>
+        </section>
+
+
+        <!-- ================= PANTALLA 1: PORTADA DRESS CODE (ELEGANTE SPORT) ================= -->
+        <section class="seccion-info seccion-dress-magico seccion-dress-portada">
+          <div class="dress-destellos-fondo" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="dress-portada-card">
+            <div class="contador-elegante-ornament" aria-hidden="true">✧ ✦ ✧</div>
+            <h2 class="dress-titulo-principal dress-portada-titulo">
+              <span class="estrella-magica">✦</span> Elegante Sport <span class="estrella-magica">✦</span>
+            </h2>
+            <p class="dress-subtitulo-magico dress-portada-subtitulo">✧ Dress Code ✧</p>
+            <div class="contador-elegante-ornament dress-ornamento-inferior" aria-hidden="true">✧ ♡ ✧</div>
+          </div>
+
+          <div class="scroll-indicador">↓ Desliza para ver más ↓</div>
+        </section>
+
+
+        <!-- ================= PANTALLA 2: SECTOR MUJERES (ELLAS) ================= -->
+        <section class="seccion-info seccion-dress-magico">
+          <div class="dress-destellos-fondo" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="dress-sector-libre">
+            <h3 class="dress-sector-titulo dress-titulo-grande">
+              <span class="estrella-magica">✧</span> Ellas <span class="estrella-magica">✧</span>
+            </h3>
+            <img src="img/Mujeres.gif" alt="Ellas" class="dress-gif-gigante">
+          </div>
+
+          <div class="scroll-indicador">↓ Desliza para ver más ↓</div>
+        </section>
+
+
+        <!-- ================= PANTALLA 3: SECTOR HOMBRES (ELLOS) ================= -->
+        <section class="seccion-info seccion-dress-magico">
+          <div class="dress-destellos-fondo" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="dress-sector-libre">
+            <h3 class="dress-sector-titulo dress-titulo-grande">
+              <span class="estrella-magica">✧</span> Ellos <span class="estrella-magica">✧</span>
+            </h3>
+            <img src="img/Hombres.gif" alt="Ellos" class="dress-gif-gigante">
+          </div>
+
+          <div class="scroll-indicador">↓ Desliza para ver más ↓</div>
+        </section>
+
+
+        <!-- ================= PANTALLA 4: COLORES NO PERMITIDOS ================= -->
+        <section class="seccion-info seccion-dress-magico">
+          <div class="dress-destellos-fondo" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="dress-sector-libre">
+            <h3 class="dress-sector-titulo">Color Reservado Para La Quinceañera</h3>
+            <img src="img/color1.gif" alt="Colores No Permitidos" class="dress-gif-gigante">
+          </div>
+
+          <div class="scroll-indicador">↓ Desliza para descubrir más ↓</div>
+        </section>
+
+
+        <!-- SECCIÓN OBSEQUIO -->
+        <section class="seccion-info">
+          <img src="img/regalo.gif" class="gif-regalo" alt="Regalo">
+
+          <p class="dato-secundario">Tu presencia es el mejor regalo que podría recibir en mi fiesta. </p>
+          <p class="dato-secundario"> Si además deseas hacerme un presente para ayudarme a cumplir mis metas, te lo agradezco de corazón."</p>
+
+          <button class="btn-plata" id="btnBancarios">💳 DATOS BANCARIOS</button>
+
+          <div id="datosBancarios" class="datos-bancarios" style="display: none;">
+            <p>🏦 Banco: Mercado Pago</p>
+            <p>📊 CBU: XXXXXXXXXXXXXXXX</p>
+            <p>👤 Titular: Constanza valentina bravo siman</p>
+            <p>📧 Alias: consti.mp13</p>
+          </div>
+        </section>
+
+
+        <!-- SECCIÓN CONFIRMACIÓN -->
+        <section class="seccion-info">
+          <h2 class="dato-principal">¿Me acompañas?</h2>
+          <h2 class="dato-secundario">Confirma tu asistencia</h2>
+          <div class="botones-finales">
+            <a href="#" id="btnWhatsapp" class="btn-plata">💬 WHATSAPP</a>
+          </div>
+          <p class="dato-secundario mt-20"> "Para que esta noche sea perfecta e inolvidable, confírmanos tu presencia. ¡Te esperamos con los brazos abiertos!" </p>
+          <div class="scroll-indicador">↓ Créditos ↓</div>
+        </section>
+
+
+        <!-- ================= SECCIÓN CRÉDITOS: CREADOR Y DISEÑADOR ================= -->
+        <section class="seccion-info seccion-creditos">
+          <div class="dress-destellos-fondo" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="creditos-contenido">
+            <div class="contador-elegante-ornament" aria-hidden="true">✧ ✦ ✧</div>
+            
+            <p class="creditos-etiqueta">Diseño y Creación</p>
+            <h2 class="creditos-empresa">Dimensión Artística</h2>
+            <p class="creditos-autor"> <span>Erik Sierra</span></p>
+
+            <!-- Iconos de Redes Sociales -->
+            <div class="creditos-redes">
+              <a href="https://wa.me/5493853026369?text=Hola%2C%20Vi%20tus%20dise%C3%B1os%2C%20me%20interesa%20solicitar%20una%20invitaci%C3%B3n%20web%20!" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+                <img src="img/whatsapp.png" alt="WhatsApp" class="icono-red-credito">
+              </a>
+              <a href="https://www.instagram.com/dimensionartistica3/" target="_blank" rel="noopener noreferrer" aria-label="Ver Instagram">
+                <img src="img/Instagram.png" alt="Instagram" class="icono-red-credito">
+              </a>
+              <a href="https://www.facebook.com/share/1F1HvoR4ke/" target="_blank" rel="noopener noreferrer" aria-label="Ver Facebook">
+                <img src="img/Facebook.png" alt="Facebook" class="icono-red-credito">
+              </a>
+            </div>
+
+            <!-- Imagen QR debajo de los iconos -->
+            <div class="creditos-qr-contenedor">
+              <img src="img/qr.png" alt="Código QR Dimensión Artística" class="creditos-qr-img">
+            </div>
+
+            <div class="contador-elegante-ornament creditos-ornamento-inferior" aria-hidden="true">✧ ♡ ✧</div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <audio id="musica" src="audio/musica.mp3" preload="auto" loop playsinline></audio>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // ===== EFECTO MÁGICO DE ESCRITURA A MANO ALZADA PALABRA POR PALABRA =====
+    document.addEventListener("DOMContentLoaded", () => {
+      // Seleccionamos todos los textos blancos de las secciones
+      const selectoresTextoBlanco = [
+        ".seccion-info .dato-secundario",
+        ".seccion-info .titulo-grande",
+        ".seccion-info .dato-resaltante",
+        ".seccion-info .titulo-lugares",
+        ".seccion-info .dato-principal"
+      ];
+
+      const elementosTexto = document.querySelectorAll(selectoresTextoBlanco.join(", "));
+
+      elementosTexto.forEach((el) => {
+        const textoOriginal = el.textContent.trim();
+        if (!textoOriginal) return;
+
+        const palabras = textoOriginal.split(/\s+/);
+        el.innerHTML = "";
+        el.classList.add("texto-magico-contenedor");
+
+        palabras.forEach((palabra) => {
+          const spanPalabra = document.createElement("span");
+          spanPalabra.className = "palabra-magica";
+          spanPalabra.textContent = palabra;
+
+          // Pequeños destellos mágicos que brotan al escribir cada palabra
+          const destello1 = document.createElement("i");
+          destello1.className = "chispa-escritura c1";
+          const destello2 = document.createElement("i");
+          destello2.className = "chispa-escritura c2";
+
+          spanPalabra.appendChild(destello1);
+          spanPalabra.appendChild(destello2);
+
+          el.appendChild(spanPalabra);
+          el.appendChild(document.createTextNode(" "));
+        });
+      });
+
+      // Función que anima palabra por palabra los textos de una sección cuando entra en pantalla
+      const animarSeccion = (seccion) => {
+        const palabrasSeccion = seccion.querySelectorAll(".palabra-magica");
+        palabrasSeccion.forEach((palabra, index) => {
+          palabra.classList.remove("escribiendo");
+          void palabra.offsetWidth; // Forzar reflow para reiniciar la animación
+          palabra.style.animationDelay = `${index * 0.16}s`;
+          const chispas = palabra.querySelectorAll(".chispa-escritura");
+          chispas.forEach((chispa, i) => {
+            chispa.style.animationDelay = `${index * 0.16 + (i * 0.08)}s`;
+          });
+          palabra.classList.add("escribiendo");
+        });
+      };
+
+      // Observador para activar la escritura cuando el usuario desliza hacia cada pantalla
+      const scrollContainer = document.querySelector(".scroll-container");
+      const secciones = document.querySelectorAll(".seccion-info");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animarSeccion(entry.target);
+              } else {
+                entry.target.querySelectorAll(".palabra-magica").forEach((p) => {
+                  p.classList.remove("escribiendo");
+                });
+              }
+            });
+          },
+          {
+            root: scrollContainer,
+            threshold: 0.45
+          }
+        );
+
+        secciones.forEach((sec) => observer.observe(sec));
+      } else {
+        secciones.forEach((sec) => animarSeccion(sec));
+      }
+
+      // Activamos la primera sección apenas se abre la pantalla #elegante
+      const pantallaElegante = document.getElementById("elegante");
+      if (pantallaElegante) {
+        const mutObserver = new MutationObserver(() => {
+          if (pantallaElegante.classList.contains("activa") && secciones[0]) {
+            setTimeout(() => animarSeccion(secciones[0]), 250);
+          }
+        });
+        mutObserver.observe(pantallaElegante, { attributes: true, attributeFilter: ["class"] });
+      }
+    });
+  </script>
+</body>
+</html>
